@@ -1,0 +1,809 @@
+/*NỘI DUNG HTML
+  <html>
+    <head><head>
+    <link> link của icon
+    <link> link của font chữ
+    <link> link của file .css
+  <body>
+    <div id="wapper">
+        <div id="head">
+            <div id="head-left"></div>
+            <div id="head-right"></div></div>
+        <div id="navbar"></navbar>
+        <div id="content">
+            <div id="post"></div>
+            <div id="sidebar"></div></div>
+        <div id="footer"></div>
+    </div>
+
+  </body>
+    <scrip></scrip>
+  </html>   */
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*ĐIỀU CHỈNH CHUNG CHO TẤT CẢ CÁC TRANG*/
+body {font-family: Muli, sans-serif;
+font: 100%/125% “Muli”, sans-serif;
+background-color: white;
+line-height: 1.6em;
+max-width: 100%;
+
+}
+
+
+/*PHẦN HEADER - LOGO VÀ CHỮ*/
+#header {
+background: white;
+font-size: 25px;
+height: 190px;
+}
+
+#header-left {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  margin-top: 20px;
+  background: none;
+  margin-left:300px;
+  float: left;
+}
+#header-right {
+  position: absolute;
+  width: 800px;
+  height: 190px;
+  left: 490px;
+  background: none;
+  float: right;
+  line-height: 1.1em;
+}
+
+/*kích thước logo ĐHCT*/
+img{
+width: 150px;
+height: 150px;
+}
+
+
+/*THANH MENU NGANG*/
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  width: 100%;
+  background-color: darkblue;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 16px 10px 18px;
+  background-color: darkblue;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: blue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.active {
+  background-color: black;
+  font-size: 16px;
+  color: white;
+  height: 52px;
+}
+
+
+/*PHẦN CONTENT - Điều chỉnh chung cho tất cả các trang*/
+/*Content - phần bên trái (phần nội dung>*/
+#content {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  top: 290px;
+  background: white;
+}
+
+/*----------------BỔ SUNG-----------*/
+#post {
+  text-align: center;
+  position: absolute;
+  width: 65%;
+  height: 800px;
+  left: 50px;
+  background: none;
+  float: left;
+}
+
+#enterDetails {
+  border-radius: 12px;
+  background-color: #40739e;
+  position: absolute;
+  margin-left: 150px;
+  width: 700px;
+  height: 680px;
+}
+#enterDetails h2 {
+  color: white;
+
+}
+#enterDetails h4 {
+  font-size: 18px;
+  color: white;
+
+}
+
+#checkinDetails {
+ text-align: center;
+ border-style: dotted;
+ border-radius: 8px;
+ border-width: 2px;
+ float: center;
+ width: 80%; 
+ height: 250px;
+ margin-left: 100px;
+ background-color: #40739e; 
+ color: #ecf0f1;
+ box-shadow: 5px 10px 8px #888888;
+}
+#checkoutDetails {
+ text-align: center;
+ border-style: dotted;
+ border-radius: 8px;
+ border-width: 2px;
+ float: center;
+ width: 80%; 
+ height: 250px;
+ margin-left: 100px;
+ background-color: #40739e; 
+ color: #ecf0f1;
+ box-shadow: 5px 10px 8px #888888;
+}
+#enterID {
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+  height: 50px;
+  font-size: 30px;
+}
+#enterName {
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+  height: 50px;
+  font-size: 30px;
+}
+#enterMajors {
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+  height: 50px;
+  font-size: 30px;
+}
+#enterEmail {
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+  height: 50px;
+  font-size: 30px;
+}
+#insert{
+  width: 100px;
+  height: 50px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center; 
+  background-color: darkgreen; 
+  color: white;
+  width: 100px;
+  font-size: 20px;
+}
+#remove{
+  width: 100px;
+  height: 50px;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;  
+  background-color: #e84118; 
+  color: white;
+  font-size: 20px;
+}
+
+#findDetails {
+  border-radius: 8px;
+  background-color: #40739e;
+  width: 80%;
+  margin-left: 80px;
+}
+#findDetails h1 {
+  color: white;
+  }
+#findDetails h4 {
+  color: white;
+}
+#findDetails h3 {
+  color: white;
+}
+#find{
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;  
+  background-color: darkblue; 
+  color: #ecf0f1;
+  width: 50%;
+  height: 50px;
+  font-size: 25px;
+}
+#findID {
+  width: 40%;
+  font-size: 25px;
+}
+#timeIn{
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;  
+  background-color: lime; 
+  color: black;
+  width: 150px;
+}
+#insertIn{
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;  
+  background-color: #40739e; 
+  color: #ecf0f1;
+  width: 150px;
+}
+#timeOut{
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;  
+  background-color:#b33939; 
+  color: #ecf0f1;
+  width: 150px;
+}
+#insertOut{
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;  
+  background-color:#40739e; 
+  color: #ecf0f1;
+  width: 150px;
+}
+/* Content - phần bên phải (hình)*/
+#sidebar {
+position: absolute;
+  width: 30%;
+  height: 850px;
+  left: 70%;
+  background: none;
+  float: right;
+}
+#sidebar_1 {
+  position: absolute;
+  width: 30%;
+  top: 0px;
+  left: 1020px;
+  bottom: 300px;
+  background: none;
+  float: right;
+}
+
+
+
+/*TRANG LIÊN HỆ*/
+body {font-family: Muli, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 0.5px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #000;
+}
+/*ĐIỀU CHỈNH KHUNG LIÊN HỆ*/
+#container {
+  border-radius: 5px;
+  background-color: #ccc;
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+
+/* TRANG THÀNH VIÊN NHÓM*/
+.{
+  margin:0;
+  padding: 0;
+}
+
+.group{
+  padding: 600px;
+}
+.item1{
+  position: absolute;
+  top:100px;
+  left: 50px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:200px;
+  height: 200px;
+  border-radius: 50% ;
+  transition: 0.3s;
+  background-image:linear-gradient(to top,#009fff, #ec2f4b);
+  margin: 10px;
+  overflow: hidden; 
+}
+.item1:hover{
+  position: absolute;
+  top:60px;
+  left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:300px;
+  height: 380px;
+  border-radius: 10px ;
+  background-image:linear-gradient(to top, #009fff, #ec2f4b);
+  margin: 10px;
+}
+
+.item2{
+  position: absolute;
+  top:100px;
+  left: 350px;
+  right: 0px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:200px;
+  height: 200px;
+  border-radius: 50% ;
+  transition: 0.3s;
+  background-image:linear-gradient(to right, purple, pink);
+  margin: 10px;
+  overflow: hidden;
+  }
+  .item2:hover{
+  position: absolute;
+  top:60px;
+  left: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:300px;
+  height: 380px;
+  border-radius: 10px ;
+  background-image:linear-gradient(to right, purple, pink);
+  margin: 10px;
+}
+
+.item3{
+  position: absolute;
+  top:100px;
+  left: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:200px;
+  height: 200px;
+  border-radius: 50% ;
+  transition: 0.3s;
+  background-image:linear-gradient(180deg, crimson,gold, lightsalmon,seagreen, midnightblue, indigo, violet);
+  margin: 10px;
+  overflow: hidden;
+}
+.item3:hover{
+  position: absolute;
+  top:60px;
+  left: 650px;
+  right: 0px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:300px;
+  height: 380px;
+  border-radius: 10px ;
+  background-image:linear-gradient( 180deg, crimson,gold, lightsalmon,seagreen);
+  margin: 10px;
+}
+.item4{
+  position: absolute;
+  top:450px;
+  left: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:200px;
+  height: 200px;
+  border-radius: 50% ;
+  transition: 0.3s;
+  background-image:linear-gradient(to top, indigo, crimson, pink);
+  margin: 10px;
+  overflow: hidden;
+}
+.item4:hover{
+  position: absolute;
+  top:300px;
+  left: 10px;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:300px;
+  height: 380px;
+  border-radius: 10px ;
+  background-image:linear-gradient(to top, indigo, crimson, pink);
+  margin: 10px;
+}
+.item5{
+  position: absolute;
+  top:450px;
+  left: 500px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:200px;
+  height: 200px;
+  border-radius: 50% ;
+  transition: 0.3s;
+  background-image:linear-gradient(to top,#0D4C92, #59C1BD, #A0E4CB,#CFF5E7);
+  margin: 10px;
+  overflow: hidden;
+}
+
+.item5:hover{
+  position: absolute;
+  top:300px;
+  left: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  width:300px;
+  height: 380px;
+  border-radius: 10px ;
+  background-image:linear-gradient(to top,#0D4C92, #59C1BD, #A0E4CB,#CFF5E7);
+  margin: 10px;
+}
+
+.group img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin:10px auto;
+  cursor: pointer;
+  position: relative;
+  transition:0.3s;
+}
+
+
+.group h2{
+  color:  Black;
+  font-family: 'Roboto',sans-serif;
+  margin: -1px 10px 15px;
+
+}
+.group h4 {
+  color: black;
+  margin: -2px 5px 5px;
+}
+.group p {
+  color: White ;
+  margin: -2px 5px 5px;
+}
+
+
+/*phần Footer*/
+#footer {
+  clear: both;
+  position: absolute;
+  background: darkblue;
+  top: 700px;  /***************/
+  width: 100%;
+  height: 380px;
+  line-height: 40px;
+}
+.column h2 {
+  color: white;
+}
+      
+.column ul{
+    font-size: 15px;
+    list-style-type: none;    
+}
+
+.column li a{
+    padding-top: 0;
+    padding-bottom: 10;
+    padding-left: 10;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.column li a:hover:not(.active){
+    background-color: none;
+    color: blue;
+}
+
+.column li a.active{
+    background-color: none;
+    color: none;
+    border-radius: 0px;
+    cursor: auto;
+}
+.column li a:visited {
+  color: white;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+/* Create three equal columns that floats next to each other */
+.column {
+  background-color: darkblue;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.footer:after {
+  background-color: white;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*TRANG CHỦ ĐIỀU CHỈNH*/
+*{box-sizing: border-box; -webkit-box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font: 16px/1.3 sans-serif; }
+
+/*
+PURE RESPONSIVE CSS3 SLIDESHOW GALLERY by Roko C. buljan
+http://stackoverflow.com/a/34696029/383904
+*/
+
+.CSSgal {
+  position: relative;
+  overflow: hidden;
+  height: 81%; /* Or set a fixed height */
+}
+
+/* SLIDER */
+
+.CSSgal .slider {
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  transition: 0.8s;
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+  font-size: 1rem;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  background: none 50% no-repeat;
+  background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+  visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+  background: #fff;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  line-height: 60px; /* If you want to place numbers */
+  text-align: center;
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+.CSSgal .prevNext a:hover {
+  opacity: 1;
+}
+.CSSgal .prevNext a+a {
+  left: auto;
+  right: 0;
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+.CSSgal .bullets > a {
+  display: inline-block;
+  width:       30px;
+  height:      30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+}
+.CSSgal .bullets > a:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+
+.CSSgal{
+  color: #fff;  
+  text-align: center;
+}
+.CSSgal .slider h2 {
+  margin-top: 40vh;
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  word-spacing: 0.2em;
+  font-size: 3em;
+}
+.CSSgal a {
+  border-radius: 50%;
+  margin: 0 3px;
+  color: rgba(0,0,0,0.8);
+  text-decoration: none;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--link của icon-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- link của font chữ-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli">
+<!--link liên kết với css-->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+     <div id ="header">
+          <div id ="header-left"> <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/6/6c/Logo_Dai_hoc_Can_Tho.svg/1024px-Logo_Dai_hoc_Can_Tho.svg.png" id="logo-ĐHCT"></div>
+          <div id ="header-right">
+            <h1>TRƯỜNG ĐẠI HỌC CẦN THƠ</h1>
+            <h3> BỘ MÔN: CÔNG NGHỆ IOT VÀ ỨNG DỤNG</h3>
+            <h4>NHÓM: 08</h4>
+          </div>     
+      </div>
+    <div class="navbar">
+        <a href="trang chủ.html"><i class="fa fa-fw fa-home"></i>TRANG CHỦ</a> 
+        <a href="trang thành viên nhóm.html"><i class="fa fa-fw fa-users"></i>THÀNH VIÊN NHÓM</a>
+        <div class="dropdown">
+            <button class="active" class="dropbtn"><i class="fa fa-fw fa-search"></i>GIẢI QUYẾT VẤN ĐỀ <i class="fa fa-fw fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="nhap.html">NHẬP THÔNG TIN</a>
+                <a href="Check In.html">HỆ THỐNG </a>
+                <a href="TraCuuThongTin.html">TRA CỨU THÔNG TIN</a>
+            </div>
+        </div> 
+        <a href="trang liên hệ.html"><i class="fa fa-fw fa-envelope"></i>LIÊN HỆ</a> 
+    </div>
+
+    <div id ="content">
+        <div id="post">
+        <div id="enterDetails">
+        <h2>NGƯỜI QUẢN LÝ NHẬP THÔNG TIN SINH VIÊN THAM GIA LÀM LUẬN VĂN</h2>
+
+        <h4>MSSV</h4> 
+        <input id="enterID" type="text"> 
+
+        <h4>HỌ VÀ TÊN</h4> 
+        <input id="enterName" type="text"> 
+
+        <h4>NGÀNH HỌC</h4> 
+        <input id="enterMajors" type="text">
+
+        <h4>EMAIL</h4> 
+        <input id="enterEmail" type="text"> <br><br>
+
+        <button id="insert">THÊM</button>
+        <button id="remove">XOÁ</button><br><br>
+    </div>  
+
+      </div>
+  
+        <div id="sidebar" >
+          <div class="picture">
+          <img src="https://reviewedu.net/wp-content/uploads/2021/08/dai-hoc-can-tho-ctu1-1.jpg" style="width: 400px; height: 200px;"><p></p>
+          <img src="https://cdn.vietnambiz.vn/2019/9/24/74-1569313718458529767654.jpg" style="width: 400px; height: 200px;"><p></p>
+          <img src="https://taimienphi.vn/tmp/cf/aut/37367_check-in-nghia-la-gi-1.jpg" style="width: 400px; height: 200px;"><p></p>
+        </div>
+      </div>
+
+    <div id ="footer">
+        <div class="column">
+          <h2>ĐẠI HỌC CẦN THƠ</h2>
+          <ul>
+            <li><a href="https://www.ctu.edu.vn/">TRANG CHỦ</a></li>
+            <li><a href="https://coe.ctu.edu.vn/8-gioi-thieu.html">TRƯỜNG BÁCH KHOA</a></li>
+            <li><a href="https://htql.ctu.edu.vn/htql/login.php">HỆ THỐNG QUẢN LÝ</a></li>
+            <li><a href="https://coa.ctu.edu.vn/images/upload/daotao/decuong/NS200.pdf">CÔNG NGHỆ IOT VÀ ỨNG DỤNG</a></li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h2>TÀI LIỆU THAM KHẢO</h2>
+          <ul>
+            <li><a href="https://www.w3schools.com/default.asp">W3SCHOOLS</a></li>
+            <li><a href="https://firebase.google.com/docs/database/web/read-and-write">FIREBASE</a></li>
+            <li><a href="http://www.cit.ctu.edu.vn/~dtnghi/ltweb/index.html">BÀI GIẢNG</a></li>
+            <li><a href="#">KHÁC</a></li>
+        </ul> 
+        </div>
+
+        <div class="column">
+          <h2>THÔNG TIN LIÊN HỆ</h2>
+          <ul>
+            <li><a href="https://www.ctu.edu.vn/">Khu 2, Đ.3/2, P. Xuân Khánh, Q. Ninh Kiều, Tp. Cần Thơ</a></li>
+            <li><a href="https://www.ctu.edu.vn/">ĐT: 84929 3832 663</a></li>
+            <li><a href="https://www.ctu.edu.vn/">@dhct@ctu.edu.vn</a></li>
+          </ul>      
+        </div>
+        <hr align="center" size="1px" style="margin-top: 80px;">
+        <i style="margin-left: 40px; color: darkgrey;"> @Đồ án Công nghệ IOT và Ứng dụng - Nhóm 08</i>
+    </div> 
+<script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyDe2zP7EcbE-isjyceAcmvHYyoLQwyyzZA",
+  authDomain: "test-7f2f2.firebaseapp.com",
+  databaseURL: "https://test-7f2f2-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "test-7f2f2",
+  storageBucket: "test-7f2f2.appspot.com",
+  messagingSenderId: "823257128530",
+  appId: "1:823257128530:web:29ef2e4468183ab940498b",
+  measurementId: "G-QRM8KBR09P"
+        };
+ 
+        const app = initializeApp(firebaseConfig);
+        import {getDatabase, ref, get, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+        
+
+        const db = getDatabase();
+
+        var enterID = document.querySelector("#enterID");
+        var enterName = document.querySelector("#enterName");
+        var enterMajors = document.querySelector("#enterMajors");
+        var enterEmail = document.querySelector("#enterEmail");
+            
+        var insertBtn = document.querySelector("#insert");        
+        var removeBtn = document.querySelector("#remove");
+        
+
+//--------- Thêm Data vào Firebase ---------//       
+        function InsertData() {
+            set(ref(db, "SinhVien/"+ enterID.value),{
+                MSSV: enterID.value,
+                HovaTen: enterName.value,                
+                Nganh: enterMajors.value,
+                Email: enterEmail.value
+            })
+            .then(()=>{
+                alert("Data added successfully")
+              
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+//--------- Cập nhật Data vào Firebase ---------//         
+        function UpdateData(){
+            update(ref(db, 'SinhVien/'+ enterID.value),{
+                HovaTen: enterName.value,             
+                Nganh: enterMajors.value,
+                Emai: enterEmail.value
+            })
+            .then(()=>{
+                alert("Data updated successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+//--------- Xoá Data theo MSSV trên Firebase ---------// 
+        function RemoveData(){
+            remove(ref(db, 'SinhVien/'+ enterID.value))
+            .then(()=>{
+                alert("Data deleted successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+        insertBtn.addEventListener('click', InsertData);        
+        removeBtn.addEventListener('click', RemoveData);                
+
+      </script>
+</body>
+</html> 
